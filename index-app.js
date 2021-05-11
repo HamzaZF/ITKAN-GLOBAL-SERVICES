@@ -19,7 +19,6 @@
 /*Fin du script*/
 
 /*Contact form*/
-
 $('.submit').click(function(e){
     var mail = $('.b').val();
     var subject = $('.subject').val();
@@ -27,26 +26,19 @@ $('.submit').click(function(e){
     var StatusElm = $('.status');
     StatusElm.empty();
 
-    if(mail.length > 5 && mail.includes('@') && mail.includes('.')){
-        StatusElm.append('<div> Email is valid</div>');
-    }else{
+    if(!(mail.length > 5 && mail.includes('@') && mail.includes('.'))){
         e.preventDefault();
-        StatusElm.append('<div> Email is not valid</div>');
+        StatusElm.append('<div style="color : #FED136; text-align:center;">L\'adresse mail n\'est pas valide</div>');
     }
 
-    if(subject.length > 2){
-        StatusElm.append('<div> Subject is valid</div>');
-    }else{
+    if(!(subject.length > 2)){
         e.preventDefault();
-        StatusElm.append('<div> Subject is not valid</div>');
+        StatusElm.append('<div style="color : #FED136; text-align:center;">L\'objet n\'est pas valide</div>');
     }
 
-    if(message.length > 20){
-        StatusElm.append('<div> Message is valid</div>');
-    }else{
+    if(!(message.length > 20)){
         e.preventDefault();
-        StatusElm.append('<div> Message is not valid</div>');
+        StatusElm.append('<div style="color : #FED136; text-align:center;">Le message n\'est pas valide</div>');
     }
 })
-
 /*Fin du contact form*/
