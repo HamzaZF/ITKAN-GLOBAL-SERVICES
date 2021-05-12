@@ -31,14 +31,6 @@ body{
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/bg2.jpg);
 }
 
-.accueil.marketing-home{
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/bg4.jpg);
-}
-
-.accueil.communication-home{
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/bg3.jpg);
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -199,7 +191,7 @@ html{
 
 .about{
     /*background-color: blue;*/
-    height: 100vh;
+    height: 538px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -236,64 +228,55 @@ html{
     font-weight: 700;
 }
 
-/*----------------------------------------------------------------------------*/
+/*----------------------------------*/
 .services{
     /*background-color: coral;*/
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 100vh;
+    height: 538px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
+textarea{
+    resize: none;
+}
+
 .services-page{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 1620px;
+    height: 1650px;
     width: 100%;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }
-
-.services-page.gestion-section{
-    height: 1820px;
-}
-
-div#services.services-page.communication-section{
-    height: 1220px;
-}
-
 
 .services-page div{
     margin-top: -70px;
 }
 
 .services-page .header{
-    margin-top: -110px;
+    margin-top: 0;
 }
 
 .services .header,
 .services-page .header{
     position: absolute;
     text-align: center;
-    top: 17.5%;
+    top: 14%;
 }
 
-
+.services .header .title,
 .services-page .header .title{
     text-align: center;
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 25px ;
-    transform: translateY(-40px);
-}
-
-.services-page.gestion-section .header .title{
-    transform: translateY(-75px);
 }
 
 
@@ -304,13 +287,9 @@ div#services.services-page.communication-section{
     font-size: 17px;
     font-style: italic;
     color: #009688;
-    transform: translateY(-50px);
 }
 
-.services-page.gestion-section .header .text{
-    transform: translateY(-90px);
-}
-
+.services .container,
 .services-page .container{
     position: absolute;
     display: flex;
@@ -320,11 +299,6 @@ div#services.services-page.communication-section{
     margin-bottom: 200px;
     height: auto;
     top: 45%;
-    transform: translateY(-310px);
-}
-
-.services-page.gestion-section .container{
-    transform: translateY(-420px);
 }
 
 .services .container .gestion,
@@ -476,7 +450,7 @@ div#services.services-page.communication-section{
 }
 
 .main{
-    height: 100vh;
+    height: 1178px;
     width: 100%;
     position: relative;
     display: flex;
@@ -513,13 +487,11 @@ div#services.services-page.communication-section{
 .main .cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
     width: 100%;
     height: 100%;
     line-height: 22px;
-    background-color: blue;
-    
 }
 
 .main .cards .card1{
@@ -533,6 +505,7 @@ div#services.services-page.communication-section{
     justify-content: space-around;
     text-align: center;
     position: relative;
+    transform: translateY(15px);
 }
 
 
@@ -541,23 +514,23 @@ div#services.services-page.communication-section{
     font-weight: 700;
     margin-bottom: -55px;
     font-family: 'Roboto Slab', serif;
+    transform: translateY(35px);
 }
 
 .main .cards .card2{
     height: 375px;
     width: 375px;
-    margin-top: 165px;
+    transform: translateY(-250px);
 }
 
 .main .cards .card2{
     height: 375px;
     width: 375px;
-    margin-top: 165px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     position: relative;
 }
@@ -568,6 +541,7 @@ div#services.services-page.communication-section{
     font-weight: 700;
     margin-bottom: -55px;
     font-family: 'Roboto Slab', serif;
+    margin-top: 35px;
 }
 
 
@@ -649,7 +623,7 @@ div#services.services-page.communication-section{
      display: flex;
      flex-wrap: wrap;
      flex-direction: column;
-     height: 100vh;
+     height: 600px;
      width: 100%;
      justify-content: space-between;
      align-items: center;
@@ -661,6 +635,15 @@ div#services.services-page.communication-section{
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+}
+
+.services {
+    
+    transform: translateY(-350px);
+}
+
+.services .container.marketing{
+    margin-bottom: 50px;
 }
 
 .notices .cards .card1{
@@ -719,12 +702,26 @@ div#services.services-page.communication-section{
     margin-bottom: 15px;
 }
 
+.notices .cards .card1 .header-card1 p{
+    transform: translateY(-15px);
+}
+
+.notices .cards .card2 .header-card2 p{
+    transform: translateY(-15px);
+}
+
+.notices .cards .card3 .header-card3 p{
+    transform: translateY(-15px);
+}
+
 .notices .cards .card1 .text{
     margin-top: -80px;
     max-width: 350px;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     color: #666666;
+    transform: translateY(25px);
+    font-size: 15px;
 }
 
 .notices .cards .card2 .header-card2 img{
@@ -739,6 +736,9 @@ div#services.services-page.communication-section{
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     color: #666666;
+    
+    transform: translateY(25px);
+    font-size: 15px;
 }
 
 .notices .cards .card3 .header-card3 img{
@@ -753,6 +753,9 @@ div#services.services-page.communication-section{
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     color: #666666;
+    
+    transform: translateY(25px);
+    font-size: 15px;
 }
 
 .notices .name{
@@ -764,7 +767,7 @@ div#services.services-page.communication-section{
      display: flex;
      flex-wrap: wrap;
      flex-direction: column;
-     height: 100vh;
+     height: 600px;
      width: 100%;
      justify-content: space-between;
      align-items: center;
@@ -776,14 +779,15 @@ div#services.services-page.communication-section{
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 0;
-    margin-top: 105px;
+    margin-top: 95px;
 }
 
 .contact .contact-header{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
     width: 80%;
     height: 110px;
     margin-bottom: 10px;
@@ -865,106 +869,93 @@ div#services.services-page.communication-section{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
+    height: 420px;
 }
 
-#liste{
-    margin: 0;
-    padding: 0;
-    padding-left: 80px;
-    text-align: left;
-}
-
-.services-page .container .strong{
+.contact .contain .contact-form button{
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FED136;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.67;
+    transition: opacity 0.3s;
 }
 
-.services-page ul,
-.services-page li{
+.contact .contain .contact-form button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.main .cards .card2 ul{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     line-height: 23px;
     text-align: left;
-}
-/*
-@media screen and (max-width: 713px){
-    .accueil.gestion-home .header-page .header-infos{
-        transform: translateY(70px);
-    }
-
+    transform: translateY(55px);
 }
 
-@media screen and (max-width: 453px){
-    .accueil.gestion-home .header-page .header-infos{
-        transform: translateY(130px);
-    }
-
-    .accueil.gestion-home .header-page .header-infos a .button{
-        transform: translateY(25px);
-    }
+.main .cards .card2 .text{
+    transform: translateY(70px);
 }
 
-
-@media screen and (max-width: 1500px){
-    
-    .gestion-home{
-        position:static;
+@media screen and (max-width:1050px) {
+    div.notices{
+        height: 750px;
     }
 
-    .body{
+    div.cards{
+        height: 332px;
+    }
+
+    .topbar{
+        position: fixed;
+        top: 0;
+    }
+
+    .notices .title{
         position: relative;
-        min-height: 100vh;
+        top: 320px;
     }
-    .footer{
-        position: absolute;
-        top: calc(100vh + 1800px);
-    }
-}
-
-@media screen and (min-width: 702px){
     
-    .footer{
-        transform: translateY(500px);
-    }
-}
-*/
-
-
-@media screen (max-width: 1050px){
-    
-    .footer{
-        top: calc(100vh + 2300px);
-    }
 }
 
-@media screen and (max-width: 679px){
-    
-    .footer{
-        top: calc(100vh + 4000px);
-        height: 240px;
-        justify-content: center;
-        align-items:center  
-    }
-/*
-    .footer .infos{
-        height: 50%;
-        text-align: center;
-    }
 
-    .footer .social{
-        height: 50%;
-        position: absolute;
-        left: 10px;
-        right: 10px;
-    }
-    */
-}
 
-@media screen and (max-width: 700px){
+@media screen and (min-width:700px){
+
+    .services .container,
     .services-page .container{
-        margin-bottom: 0px;
-        background-color: #009688;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        height: auto;
+        top: 45%;
+        background-color: blue;
+        margin-bottom: 0;
     }
+    
+    .notices .cards{
+        transform: translateY(-280px);
+    }
+    
+    .notices .title{
+        transform: translateY(-300px);
+    }
+    
+    .contact{
+        transform: translateY(-200px);
+        margin-bottom: -120px;
+    }
+    
 }
